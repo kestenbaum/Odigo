@@ -27,6 +27,7 @@ header {
   background: url("../img/bg_header.png") no-repeat;
   background-size: cover;
   height: 100vh;
+  overflow: hidden;
 }
 
 .header_wrap {
@@ -79,7 +80,22 @@ header {
 
   .header_nav {
     position: absolute;
-    left: -300%;
+    height: 100vh;
+    width: 50%;
+    top: 0;
+    border: 1px solid grey;
+    right: -300%;
+    background: rgba(103, 128, 159, 0.6);
+  }
+  .header_nav ul {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+  }
+  .header_nav ul li {
+    margin: 25px 0;
   }
 
   .header_burger {
@@ -120,11 +136,20 @@ header {
   .burger_active span {
     height: 0;
   }
-  .burger_active:after {
-    transform: rotate(45deg);
+  .burger_active span:after {
+    transform: rotate(-35deg);
   }
-  .burger_active:before {
-    transform: rotate(-45deg);
+  .burger_active span:before {
+    transform: rotate(35deg);
+  }
+}
+.header_nav_active {
+  right: -15px;
+}
+
+@media screen and (max-width: 500px) {
+  .header_nav {
+    width: 75%;
   }
 }
 
