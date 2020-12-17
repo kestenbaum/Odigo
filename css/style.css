@@ -6,7 +6,7 @@
   text-decoration: none;
   margin: 0;
   padding: 0;
-  font-size: 0;
+  font-family: "Lato", sans-serif;
 }
 
 .container_wrap {
@@ -25,6 +25,7 @@
 
 header {
   background: url("../img/bg_header.png") no-repeat;
+  background-size: cover;
 }
 
 .header_wrap {
@@ -37,8 +38,22 @@ header {
   justify-content: center;
 }
 
+.header_logo {
+  flex: 1 1 30%;
+}
 .header_logo img {
   max-width: 100%;
+}
+
+.header_nav ul {
+  display: flex;
+}
+.header_nav ul li {
+  list-style: none;
+}
+.header_nav ul li a span {
+  font-size: 16px;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
