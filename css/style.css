@@ -26,6 +26,7 @@
 header {
   background: url("../img/bg_header.png") no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 .header_wrap {
@@ -36,24 +37,84 @@ header {
 .header_top {
   display: flex;
   justify-content: center;
+  height: 130px;
+  align-items: center;
 }
 
 .header_logo {
   flex: 1 1 30%;
+  height: 30px;
 }
-.header_logo img {
+.header_logo a img {
   max-width: 100%;
 }
 
+.header_nav {
+  flex: 1 1 70%;
+}
 .header_nav ul {
   display: flex;
+  justify-content: flex-end;
 }
 .header_nav ul li {
   list-style: none;
+  margin: 0 40px;
 }
 .header_nav ul li a span {
   font-size: 16px;
   color: white;
+}
+.header_nav ul li:hover {
+  transform: scale(1.1);
+}
+
+.header_burger {
+  display: none;
+}
+
+@media screen and (max-width: 810px) {
+  .header_top {
+    position: relative;
+  }
+
+  .header_nav {
+    position: absolute;
+    left: -300%;
+  }
+
+  .header_burger {
+    display: flex;
+    flex: 1 1 70%;
+    justify-content: flex-end;
+  }
+
+  .burger_wrap {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 30px;
+    width: 40px;
+  }
+  .burger_wrap span {
+    position: absolute;
+    top: 50%;
+    width: 80%;
+    background: white;
+    height: 2px;
+  }
+  .burger_wrap span:after, .burger_wrap span:before {
+    content: "";
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: 2px;
+  }
+  .burger_wrap span:after {
+    transform: translateY(10px);
+  }
+  .burger_wrap span:before {
+    transform: translateY(-10px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
