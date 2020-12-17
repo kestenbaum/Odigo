@@ -94,6 +94,7 @@ header {
     position: relative;
     height: 30px;
     width: 40px;
+    cursor: pointer;
   }
   .burger_wrap span {
     position: absolute;
@@ -114,6 +115,16 @@ header {
   }
   .burger_wrap span:before {
     transform: translateY(-10px);
+  }
+
+  .burger_active span {
+    height: 0;
+  }
+  .burger_active:after {
+    transform: rotate(45deg);
+  }
+  .burger_active:before {
+    transform: rotate(-45deg);
   }
 }
 
