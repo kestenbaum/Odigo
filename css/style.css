@@ -9,8 +9,36 @@
   font-size: 0;
 }
 
-body {
-  background: red;
+.container_wrap {
+  width: 100%;
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container_main {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+header {
+  background: url("../img/bg_header.png") no-repeat;
+}
+
+.header_wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.header_top {
+  display: flex;
+  justify-content: center;
+}
+
+.header_logo img {
+  max-width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
