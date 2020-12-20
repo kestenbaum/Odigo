@@ -7,6 +7,9 @@
   margin: 0;
   padding: 0;
   font-family: "Lato", sans-serif;
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
 .container_wrap {
@@ -157,16 +160,16 @@ header {
   flex-direction: column;
 }
 
-.tittle_header {
-  width: 50%;
+.tittle_header, .description_header {
+  width: 100%;
+  max-width: 619px;
 }
-.tittle_header span {
+.tittle_header span, .description_header span {
   font-size: 50px;
   color: white;
 }
 
 .description_header {
-  width: 50%;
   margin: 20px 0;
 }
 .description_header span {
@@ -174,9 +177,85 @@ header {
   color: white;
 }
 
-@media screen and (max-width: 810px) {
-  .tittle_header, .description_header {
-    width: 75%;
+.header_form {
+  display: flex;
+  margin: 0 -15px;
+  flex: 100%;
+  min-width: 100%;
+}
+.header_form form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.header_form form .form_wrap {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  height: 49px;
+  padding: 0 15px;
+}
+.header_form form .form_wrap label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  border-bottom: 3px solid #D8D8D8;
+}
+.header_form form .form_wrap label:before {
+  flex: none;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: transparent;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.header_form form .form_wrap label input {
+  width: 100%;
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding-left: 20px;
+  height: 49px;
+}
+.header_form form .form_wrap label input::placeholder {
+  color: white;
+  font-size: 18px;
+}
+.header_form form .form_wrap label input:focus::placeholder {
+  color: transparent;
+}
+@media all and (max-width: 630px) {
+  .header_form form .form_wrap {
+    max-width: 100%;
+  }
+}
+.header_form form .button_wrap {
+  display: flex;
+  padding: 0 15px;
+}
+.header_form form .search {
+  background: #1B7DFF;
+  font-size: 24px;
+  color: white;
+  display: flex;
+  width: 171px;
+  height: 58px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 835px) {
+  .form_wrap {
+    margin: 10px 0;
+  }
+
+  .button_wrap {
+    margin: 20px 0;
   }
 }
 @media screen and (max-width: 500px) {
